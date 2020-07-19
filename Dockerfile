@@ -42,8 +42,8 @@ RUN \
     cat $(ls code42-install/*.cpi) | gzip -d -c - | cpio -i --no-preserve-owner --directory=${TARGETDIR} && \
     mv "${TARGETDIR}"/*.asar "${TARGETDIR}/electron/resources" && \
     rm "${TARGETDIR}"/electron/chrome-sandbox && \
-    chmod 755 "${TARGETDIR}/electron/crashplan" && \
-    chmod 755 "${TARGETDIR}/bin/CrashPlanService" && \
+    chmod 755 "${TARGETDIR}/electron/code42" && \
+    chmod 755 "${TARGETDIR}/bin/Code42Service" && \
     chmod 755 "${TARGETDIR}/bin/restore-tool" && \
     # Keep a copy of the default config.
     mv ${TARGETDIR}/conf /defaults/conf && \
