@@ -73,8 +73,8 @@ RUN \
     ln -s /config/repository/metadata /usr/local/crashplan/metadata && \
     # Cleanup
     del-pkg build-dependencies && \
-    ln -s  /usr/local/crashplan/bin/CrashPlanService /usr/local/crashplan/bin/Code42Service && \
-    ln -s /usr/local/crashplan/bin/crashplan /usr/local/crashplan/electron/code42 && \
+    ln -s /usr/local/crashplan/bin/Code42Service /usr/local/crashplan/bin/CrashPlanService && \
+    ln -s /usr/local/crashplan/electron/code42 /usr/local/crashplan/bin/crashplan  && \
     rm -rf /tmp/*
 
 # Misc adjustments.
