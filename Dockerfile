@@ -39,7 +39,7 @@ RUN \
     curl -# -L ${CRASHPLAN_URL} | tar -xz && \
     mkdir -p ${TARGETDIR} && \
     # Extract CrashPlan.
-    cat $(ls crashplan-install/*.cpi) | gzip -d -c - | cpio -i --no-preserve-owner --directory=${TARGETDIR} && \
+    cat $(ls code42-install/*.cpi) | gzip -d -c - | cpio -i --no-preserve-owner --directory=${TARGETDIR} && \
     mv "${TARGETDIR}"/*.asar "${TARGETDIR}/electron/resources" && \
     rm "${TARGETDIR}"/electron/chrome-sandbox && \
     chmod 755 "${TARGETDIR}/electron/crashplan" && \
